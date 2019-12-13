@@ -1,0 +1,60 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <title>美黛拉- 登录</title>
+    <meta name="keywords" content="美黛拉">
+    <meta name="description" content="美黛拉内部管理系统">
+    <link href="/Public/Admin/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/Public/Admin/css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
+    <link href="/Public/Admin/css/animate.min.css" rel="stylesheet">
+    <link href="/Public/Admin/css/style.min.css" rel="stylesheet">
+    <link href="/Public/Admin/css/login.min.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <meta http-equiv="refresh" content="0;ie.html" />
+    <![endif]-->
+    <script>
+        if(window.top!==window.self){window.top.location=window.location};
+    </script>
+    <style>
+        .verify{
+            border: 1px solid #e5e6e7;
+            border-radius: 1px;
+            padding: 6px 12px;
+            float: left;
+            width: 55%;
+            transition: border-color .15s ease-in-out 0s, box-shadow .15s ease-in-out 0s;
+            font-size: 14px;
+            color: black;
+            }
+    </style>
+</head>
+
+<body class="signin">
+    <div class="signinpanel">
+        <div class="row">
+            <div class="col-sm-6 center-block text-center" style="float:none;">
+                <form method="post" action="">
+                    <h4 class="no-margins text-info">美黛拉管理系统</h4>
+                    <p class="m-t-md text-success">欢迎登录</p>
+                    <input type="text" class="form-control uname" placeholder="用户名" name="admin_name"/>
+                    <input type="password" class="form-control pword m-b" placeholder="密码" name="admin_pwd"/>
+                    <input type="text" name="verify"  placeholder="验证码" class="verify">
+                    <img src="<?php echo U('verify');?>" onclick="this.src='<?php echo U('Admin/Login/verify');?>'" width="120" height="32px" alt="点击切换图片"/>
+                    <button class="btn btn-success btn-block" type="submit">登录</button>
+                </form>
+            </div>
+        </div>
+        <div class="signup-footer">
+            <div class="pull-left">
+                &copy; 2019 All Rights Reserved.
+            </div>
+        </div>
+    </div>
+</body>
+
+
+</html>

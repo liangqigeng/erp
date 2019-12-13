@@ -1,0 +1,206 @@
+/* Author: Louis Holladay
+ * Website: AdminDesigns.com
+ * Last Updated: 02/01/14 
+ * Copyright 2014 Admin Designs
+=================================================
+ * This file is reserved for changes made by 
+ * the user. It's often times a good idea to 
+ * seperate your changes from the themes core.
+ * It makes modifications, and future theme
+ * updates much easier to apply.
+================================================= */
+/* These styles have been placed here for as 
+ * they have a high chance of needing to be
+ * changed if one decides to modify the header
+-----------------------------------------------*/
+/* Navbar bottom border disabled by default */
+.navbar {
+  border-bottom: 1px solid transparent; }
+
+/* Header button states - text colors */
+.header-btns > div > button:focus {
+  color: #666; }
+
+.header-btns > div > button:hover {
+  color: #0094d2; }
+
+ .header-btns .user {margin-right: 20px;}
+
+ #docs-content {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #ddd;
+    min-height: 500px;
+    padding: 25px;
+}
+
+/* Sidebar menu item states - background colors */
+/* top level*/
+/* Submenu item level */
+/* Place your custom styles or styles which 
+ * have been generated with the customization 
+ * tool below this line. 
+-----------------------------------------------*/
+.clear{
+    clear:both;
+}
+.list{
+    width:100%;
+    background: #333333;
+    height:90px;
+}
+.left{
+    float:left;
+}
+.right{
+    float:right;
+}
+.logo{
+    padding: 15px 40px;
+    width: 15%;
+    height: 90px;
+}
+
+/* 引用自定义字体*/
+@font-face {
+    font-family: 'iconfont';
+    src: url('../font/iconfont.eot');
+    src: url('../font/iconfont.eot?#iefix') format('embedded-opentype'),
+    url('../font/iconfont.woff2') format('woff2'),
+    url('../font/iconfont.woff') format('woff'),
+    url('../font/iconfont.ttf') format('truetype'),
+    url('../font/iconfont.svg#iconfont') format('svg');
+}
+/* 引用自定义字体样式*/
+.iconfont {
+    font-family: "iconfont" !important;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.menuicon1{
+    font-size: 30px;
+    text-align: center;
+    color:white;
+}
+.menuicon2{
+    font-size: 16px;
+    margin: 5px;
+}
+.menu1{
+    width:85% ;
+    height: 90px;
+}
+ul li{
+    list-style: none;
+}
+.menu{
+    width: 8%;
+    height: 70px;
+    color:white;
+    text-align: center;
+    margin-left:15px;
+}
+.menu1-wrap{
+    padding: 10px 0px;
+}
+.sale{
+    background:#f2c230;
+}
+.purch{
+    background:#2fbfbf;
+}
+.store{
+    background:#57b9e6;
+}
+.account{
+    background:#6b89c7;
+}
+.service{
+    background:#e74c2e;
+}
+.affair{
+    background:#b57f7f;
+}
+.delivery{
+    background:#3078c0;
+}
+.admin{
+    background:#de7921;
+}
+.menuc{
+    background:#333333;
+    text-align: center;
+}
+.header-btns a{
+    text-decoration: none;
+}
+.menu1-wrap li a{
+    text-decoration: none;
+    color:white;
+    transition: font-size 0.25s linear, width 0.25s linear;
+}
+.menu1-wrap li a:hover{
+   color:cornflowerblue;
+}
+.menuicon1 a:hover{
+     font-size: 35px;
+
+ }
+.sidebar-nav li a{
+    text-decoration: none;
+    color:white;
+    transition: font-size 0.25s linear, width 0.25s linear;
+}
+.sidebar-nav li a:hover{
+    color:firebrick;
+}
+.msg_deal{
+    width: 1100px;
+    height: 500px;
+    border:1px solid black;
+}
+.msg{
+    width: 300px;
+}
+.msg_right{
+    margin-right:10px;
+}
+.msg_top_left{
+    width:80px;
+    height: 20px;
+    text-align: center;
+    color:#de7921;
+}
+.msg_top_right{
+    width:120px;
+    height: 20px;
+    background: #ffe9c9;
+}
+.deal{
+    padding:0 5px;
+
+}
+.deal span{
+  padding:0 2px;
+}
+.edit{
+    border-right:1px solid gray;
+}
+.done{
+    color:#187502;
+}
+.msg_content{
+    padding:10px;
+    border:1px solid black;
+    background:white;
+}
+.msg_content_top{
+    margin-bottom:10px;
+}
+.msg_content_title{
+    font-weight: bold;
+    margin:15px 0;
+}
+.msg_content_remark{
+    text-indent: 2em;
+}

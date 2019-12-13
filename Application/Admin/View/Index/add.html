@@ -1,0 +1,138 @@
+<include file="Common:header"/>
+<style>
+    #upload{
+        opacity:0;
+    }
+    #img{
+        display:block;
+        border:1px solid #999;
+        height:200px;
+        width:200px;
+        text-align:center;
+        margin-top:-20px;
+
+    }
+    ::-webkit-datetime-edit { padding: 1px; }
+    ::-webkit-datetime-edit-fields-wrapper { background-color: #eee; }
+    ::-webkit-datetime-edit-text { color: #4D90FE; padding: 0 .3em; }
+    ::-webkit-datetime-edit-year-field { color: purple; }
+    ::-webkit-datetime-edit-month-field { color: blue; }
+    ::-webkit-datetime-edit-day-field { color: green; }
+    ::-webkit-inner-spin-button { visibility: hidden; }
+    ::-webkit-clear-button{ visibility: hidden; }
+    ::-webkit-calendar-picker-indicator {
+        border: 1px solid #ccc;
+        border-radius: 2px;
+        box-shadow: inset 0 1px #fff, 0 1px #eee;
+        background-color: #eee;
+        background-image: -webkit-linear-gradient(top, #f0f0f0, #e6e6e6);
+        color: #666;
+    }
+    input[type=date] {
+        -webkit-appearance: none;
+    }
+
+</style>
+
+	 <div class="row">
+        <div class="col-md-10 col-lg-8 center-column">
+        <form action="" method="post" class="cmxform" enctype="multipart/form-data">
+        	<div class="panel">
+            <div class="panel-heading">
+              <div class="panel-title">问题录入</div>
+              <div class="panel-btns pull-right margin-left">
+              <a href="case_list.html" class="btn btn-default btn-gradient dropdown-toggle"><span class="glyphicon glyphicon-chevron-left"></span></a>
+            	  </div>
+            </div>
+            <div class="panel-body">
+            	<div class="col-md-7">
+                    <div class="form-group">
+                      <div class="input-group"> <span class="input-group-addon">所属分类</span>
+                        <select name="li_id" class="form-control">
+                              <option value="1">生产订单</option>
+                              <option value="2">售后申请</option>
+                              <option value="3">采购申请</option>
+                              <option value="4">快递申请</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="input-group"> <span class="input-group-addon">标题：</span>
+                        <input type="text" name="que_title" value="" class="form-control">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group"> <span class="input-group-addon">出货时间</span>
+                            <input type="text" onfocus="(this.type='date')" name="que_addtime" value="" id="date" class="form-control" placeholder="尽量按时出货，最多拖一天">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="input-group"> <span class="input-group-addon">备注：</span>
+                          <input type="text" name="que_remark" value="" class="form-control">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="input-group"> <span class="input-group-addon">附件：</span>
+                          <input type="file" name="que_photo" id="upload"/>
+                          <label for="upload" style="margin-bottom:0;">
+                              <img src="__ADMIN__/img/upload.png" alt="" id="img">
+                          </label>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="input-group"> <span class="input-group-addon">所属分类</span>
+                          <select name="admin_id" class="form-control">
+                              <option value="1">小明</option>
+                              <option value="2">小田</option>
+                              <option value="3">小梁</option>
+                              <option value="4">小李</option>
+                          </select>
+                      </div>
+                    </div>
+                </div>
+
+                <div class="col-md-7">
+	                <div class="form-group">
+	                  <input type="submit" value="提交" class="submit btn btn-blue">
+	                </div>
+                </div>
+            </div>
+          </div>
+          </form>
+        </div>
+    </div>
+  </section>
+  <!-- End: Content --> 
+</div>
+<!-- End: Main -->
+<script src="__ADMIN__/js/plugins/layer/laydate/laydate.js"></script>
+
+</body>
+<script>
+    //做图片上传预览
+    function getObjectURL(file) {
+        var url = null ;
+        if (window.createObjectURL!=undefined) { // basic
+            url = window.createObjectURL(file) ;
+        } else if (window.URL!=undefined) { // mozilla(firefox)
+            url = window.URL.createObjectURL(file) ;
+        } else if (window.webkitURL!=undefined) { // webkit or chrome
+            url = window.webkitURL.createObjectURL(file) ;
+        }
+        return url ;
+    }
+    $('#upload').change(function(){
+        var url=getObjectURL(this.files[0]);
+        if(url){
+            $('#img').attr('src',url);
+        }
+    })
+    $('#upload').change(function(){
+        var url=getObjectURL(this.files[0]);
+        if(url){
+            $('#img').attr('src',url);
+        }
+    })
+    laydate({elem:"#date",event:"focus"});
+</script>
+</html>
