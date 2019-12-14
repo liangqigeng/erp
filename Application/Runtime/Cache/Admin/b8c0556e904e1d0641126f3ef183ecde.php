@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Core CSS  -->
-    <link rel="stylesheet" type="text/css" href="/Public/Admin/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/Public/Admin/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/Public/Admin/css/glyphicons.min.css">
 
     <!-- Theme CSS -->
@@ -35,7 +35,6 @@
     <script type="text/javascript" src="/Public/Admin/js/uniform.min.js"></script>
     <script type="text/javascript" src="/Public/Admin/js/main.js"></script>
     <script type="text/javascript" src="/Public/Admin/js/custom.js"></script>
-    <script type="text/javascript" src="/Public/Admin/js/jquery.nicescroll.js"></script>
     <script type="text/javascript">
         var getMsgUrl = "<?php echo U('Common:getMsg');?>";
     </script>
@@ -53,7 +52,7 @@
         <a href=""><span class="menuicon2 iconfont">&#xe60a;</span>消息</a>
         <a href=""><span class="menuicon2 iconfont">&#xe613;</span>问题</a>
         <a href=""><span class="menuicon2 iconfont">&#xe622;</span><?php echo ($admin_name); ?></a>
-        <a href="<?php echo U('loginOut');?>"><span class="menuicon2 iconfont">&#xe641;</span>退出</a>
+        <a href="<?php echo U('Index/loginOut');?>"><span class="menuicon2 iconfont">&#xe641;</span>退出</a>
     </div>
     <div class="clear"></div>
     <div class="list">
@@ -74,7 +73,7 @@
 </header>
 <!-- End: Header -->
 <!-- Start: Main -->
-<div id="main" style="margin-top: 40px">
+<div id="main">
     <!-- Start: Sidebar -->
     <aside id="sidebar" class="affix">
         <div id="sidebar-search">

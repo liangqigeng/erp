@@ -39,9 +39,9 @@ class CommonController extends Controller{
 
     //异步轮询推送消息
     public function getMsg() {
-//        if(!IS_AJAX) {
-//            E('页面不存在');
-//        }
+        if(!IS_AJAX) {
+            E('页面不存在');
+        }
         $admin_id = cookie('admin_id');
         $usermsg = M('question')->where("to_id = $admin_id")->select();
         foreach ($usermsg  as $k=>$v){

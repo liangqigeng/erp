@@ -71,16 +71,14 @@
          </div>
     </div>
 </header>
-
 <!-- End: Header -->
 <!-- Start: Main -->
-<div id="main" style="margin-top: 130px">
+<div id="main" style="margin-top: 40px">
     <!-- Start: Sidebar -->
     <aside id="sidebar" class="affix">
-        <div id="sidebar-search ">
+        <div id="sidebar-search">
             <div class="sidebar-toggle"><span class="glyphicon glyphicon-resize-horizontal"></span></div>
         </div>
-        <div class="clear"></div>
         <div id="sidebar-menu">
             <ul class="nav sidebar-nav">
                 <li class="menuc"><div class="menuicon1 iconfont "><a href="<?php echo U('add');?>">&#xe60f;</a></div><div><a href="<?php echo U('add');?>">问题录入</a></div></li>
@@ -102,30 +100,102 @@
     <section id="content">
         <div id="topbar" class="affix">
             <ol class="breadcrumb">
-                <li class="active"><a href="<?php echo U('Index/index');?>"><span class="glyphicon glyphicon-home" style="font-size: 20px;"></span></a></li>
+                <li class="active"><a href="<?php echo U('Index/index');?>"><span class="glyphicon glyphicon-home"></span></a></li>
             </ol>
         </div>
         <div class="container">
 
 
+<link rel="stylesheet" href="/Public/Admin/css/store.css">
+<style>
+    ::-webkit-datetime-edit { padding: 1px; }
+    ::-webkit-datetime-edit-fields-wrapper { background-color: #eee; }
+    ::-webkit-datetime-edit-text { color: #4D90FE; padding: 0 .3em; }
+    ::-webkit-datetime-edit-year-field { color: purple; }
+    ::-webkit-datetime-edit-month-field { color: blue; }
+    ::-webkit-datetime-edit-day-field { color: green; }
+    ::-webkit-inner-spin-button { visibility: hidden; }
+    ::-webkit-clear-button{ visibility: hidden; }
+    ::-webkit-calendar-picker-indicator {
+        border: 1px solid #ccc;
+        border-radius: 2px;
+        box-shadow: inset 0 1px #fff, 0 1px #eee;
+        background-color: #eee;
+        background-image: -webkit-linear-gradient(top, #f0f0f0, #e6e6e6);
+        color: #666;
+    }
+    input[type=date] {
+        -webkit-appearance: none;
+    }
 
+</style>
+	 <div class="row">
+        <div class="col-md-12 col-lg-12">
+        <form action="" method="post" enctype="multipart/form-data">
+        	<div class="panel">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-md-4 col-lg-4">
+                        <div class="panel-title"><span class="glyphicon glyphicon glyphicon-list"></span>入库管理</div>
+                    </div>
+                    <div class="col-md-4 col-lg-4">
+                        <div class="panel-title">货物批次：</div><div class="panel-title">库存报警：</div>
+                    </div>
+                    <div class="col-md-3 col-lg-3">
+                        <div class="panel-title">入库日期：<input type="date" id="date"></div>
+                    </div>
+                    <div class="panel-btns pull-right margin-left">
+                        <a href="<?php echo U(index);?>" class="btn btn-default btn-gradient dropdown-toggle"><span class="glyphicon glyphicon-chevron-left"></span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+            	<div class="col-md-7 tt">
 
+                </div>
 
-		
-		<div class="col-md-12 col-lg-12">
-			<div id="docs-content">
-				<h2 class="page-header margin-top-none">未处理消息</h2>
-				<div class="msg_deal">
-
-				</div>
-				<h2 class="page-header margin-top-none">历史消息</h2>
-				<input type="button" value="点我一下" class="pp">
-			</div>
-		</div>
-    </div> 
+                <div class="col-md-7">
+	                <div class="form-group">
+	                  <input type="submit" value="提交" class="submit btn btn-blue">
+	                </div>
+                </div>
+            </div>
+          </div>
+          </form>
+        </div>
+    </div>
   </section>
   <!-- End: Content --> 
 </div>
-<!-- End: Main --></body>
-<script src="/Public/Admin/js/index.js"></script>
+<!-- End: Main -->
+<script src="/Public/Admin/js/plugins/layer/laydate/laydate.js"></script>
+
+</body>
+<script>
+    //做图片上传预览
+    function getObjectURL(file) {
+        var url = null ;
+        if (window.createObjectURL!=undefined) { // basic
+            url = window.createObjectURL(file) ;
+        } else if (window.URL!=undefined) { // mozilla(firefox)
+            url = window.URL.createObjectURL(file) ;
+        } else if (window.webkitURL!=undefined) { // webkit or chrome
+            url = window.webkitURL.createObjectURL(file) ;
+        }
+        return url ;
+    }
+    $('#upload').change(function(){
+        var url=getObjectURL(this.files[0]);
+        if(url){
+            $('#img').attr('src',url);
+        }
+    })
+    $('#upload').change(function(){
+        var url=getObjectURL(this.files[0]);
+        if(url){
+            $('#img').attr('src',url);
+        }
+    })
+    laydate({elem:"#date",event:"focus"});
+</script>
 </html>

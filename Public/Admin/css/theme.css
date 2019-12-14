@@ -108,7 +108,7 @@ body {
   width: 100%; }
 
 #content > .container {
-  max-width: 1665px !important;
+  max-width: 1920px !important;
   padding: 35px 35px 50px 45px; }
 
 /*===============================================
@@ -654,6 +654,7 @@ ul.dropdown-items > li a:hover {
   max-height: 52px;
   padding-left: 20px;
   border-left: 1px solid #d2d2d2;
+  margin-top: -42px;
 }
 
 .breadcrumb {
@@ -2917,7 +2918,6 @@ label .checker, label .radio, .form-horizontal label .checker, .form-horizontal 
 .btn-light.btn-gradient, .btn-light2.btn-gradient, .btn-light3.btn-gradient, .btn-light4.btn-gradient, .btn-light5.btn-gradient, .btn-light6.btn-gradient, .btn-light7.btn-gradient, .btn-default.btn-gradient {
   text-shadow: 0 1px #ffffff;
   border-color: #cccccc rgba(0, 0, 0, 0.19) rgba(0, 0, 0, 0.18);
-  background-color: "";
   background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.9) 50%, rgba(255, 255, 255, 0.1) 100%);
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.9) 10%, rgba(255, 255, 255, 0.1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80ffffff',endColorstr='#00ffffff',GradientType=0);
@@ -2954,9 +2954,6 @@ body.hidden-searchbar #sidebar.affix {
  * this compensates for the change in height */
 header.navbar-fixed-top + #main {
   padding-top: 50px; }
-
-#topbar.affix + .container {
-  padding-top: 87px; }
 
 /* for preview only - no real use in development enviroment */
 body.hidden-breadcrumbs.fixed-breadcrumbs #content > .container {
